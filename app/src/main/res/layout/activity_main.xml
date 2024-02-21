@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:weightSum="100"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="320dp"
+            android:layout_height="45dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rounded_text"
+            android:ems="10"
+            android:hint="city, country code"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppin_regular"/>
+
+
+        <ImageButton
+            android:id="@+id/btnGet"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="end"
+            android:background="@drawable/rounded_corner"
+            android:onClick="getWeatherDetails"
+            android:src="@android:drawable/ic_menu_search" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <ImageView
+        android:id="@+id/currentWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="-25dp"
+        app:srcCompat="@drawable/clear" />
+
+    <TextView
+        android:id="@+id/tempDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-45dp"
+        android:fontFamily="@font/poppin_regular"
+        android:text="7 °C"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="100dp"
+
+        />
+
+    <TextView
+        android:id="@+id/cityDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-48dp"
+        android:fontFamily="@font/poppin_regular"
+        android:text="Richmond"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="45dp" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:layout_marginTop="35dp"
+            android:id="@+id/humidity"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/humidity" />
+
+        <TextView
+            android:id="@+id/humidityDisplay"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/humidity"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/poppin_regular"
+            android:lines="2"
+            android:text="Humidity \n70%"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-5dp">
+
+        <ImageView
+            android:layout_marginTop="35dp"
+            android:id="@+id/windSpeed"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_gravity="start"
+            app:srcCompat="@drawable/wind" />
+
+        <TextView
+            android:id="@+id/windSpeedDisplay"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/windSpeed"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="-2dp"
+            android:fontFamily="@font/poppin_regular"
+            android:lines="2"
+            android:text="Wind Speed\n70 km/h"
+            android:textColor="@color/white"
+            android:textSize="40dp" />
+
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>
